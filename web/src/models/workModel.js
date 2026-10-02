@@ -37,7 +37,9 @@ const workSchema = new mongoose.Schema(
       payment: {
       amount: {
         type: Number,
-        required: true,
+          required: function () {
+            return this.payment?.type === "fixed" || this.payment?.type === "hourly";
+          },
         min: 0,
       },
 

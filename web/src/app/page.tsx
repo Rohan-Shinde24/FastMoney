@@ -1,8 +1,6 @@
-import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-   <>
-   </>
-  );
+  // Root "/" redirects to the dashboard
+  redirect("/dashboard");
 }

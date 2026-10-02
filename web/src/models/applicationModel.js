@@ -21,8 +21,9 @@ const applicationSchema = new Schema(
     },
     proposal: {
       type: String,
+      required: true,
+      trim: true,
       maxlength: 2000,
-      default: ""
     },
     isDeleted: { type: Boolean, default: false },
   },
